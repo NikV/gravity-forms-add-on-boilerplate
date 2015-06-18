@@ -1,3 +1,3 @@
-# gravity-forms-add-on-boilerplate
+# Gravity Forms Add-on Boilerplate
 
-My Own boilerplate for Gravity Forms Add-Ons
+A boilerplate for Gravity Forms Add-Ons. Currently in development. 
