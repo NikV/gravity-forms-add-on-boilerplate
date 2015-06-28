@@ -34,11 +34,12 @@ if (class_exists("GFForms")) {
 		 *
 		 * @since 1.0
 		 */
+
 		// public function init() {
 
 		//	parent::init();
 
-		// add_action here
+		//  add_action() here
 
 
 		// }
@@ -120,6 +121,27 @@ if (class_exists("GFForms")) {
 					)
 				)
 			);
+		}
+
+		/**
+		 * Columns for the Feed
+		 *
+		 * @return array
+		 */
+		protected function feed_list_columns() {
+			return array(
+				'feedName' => __('Name', 'simplefeedaddon'),
+				'mytext'   => __('My Textbox', 'simplefeedaddon')
+			);
+		}
+
+		/**
+		 * @param $feed
+		 *
+		 * @return string
+		 */
+		public function get_column_value_mytext( $feed ){
+			return '<b>' . $feed['meta']['mytext'] . '</b>';
 		}
 
 		/**
