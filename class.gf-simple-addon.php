@@ -27,6 +27,16 @@ if (class_exists("GFForms")) {
 		protected $_url = "http://www.gravityforms.com";
 		protected $_title = "Gravity Forms Simple Add-On";
 		protected $_short_title = "Test Add-On";
+		private static $_instance = null;
+
+		public static function get_instance() {
+
+			if ( self::$_instance == null )
+				self::$_instance = new GFSample();
+
+			return self::$_instance;
+
+		}
 
 
 		/**
@@ -86,13 +96,11 @@ if (class_exists("GFForms")) {
 							'choices'       => array(
 								array(
 									'name'   => 'choice1',
-									'tooltip'=> 'this is the tooltip for choice1',
 									'label'  => 'this is the label for choice1',
 									'value'  => 'this is the value for choice1'
 								),
 								array(
 									'name'    => 'choice2',
-									'tooltip' => 'this is the tooltip for choice2',
 									'label'   => 'this is the label for choice2',
 								),
 							),
@@ -212,6 +220,4 @@ if (class_exists("GFForms")) {
 
 	}
 
-	// Let's run our new class!
-	new GFSample();
 }

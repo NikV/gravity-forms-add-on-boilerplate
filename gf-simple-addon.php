@@ -33,7 +33,7 @@ add_action('gform_loaded', array('GF_Test', 'load'), 5);
  */
 class GF_Test {
 
-	static function load() {
+	public static function load() {
 		if( ! method_exists('GFForms', 'include_payment_addon_framework') ) {
 			return;
 		}
@@ -45,10 +45,6 @@ class GF_Test {
 		GFAddOn::register( 'GFSample' );
 	}
 
-
 }
 
 
-function gf_sample() {
-	return GFSample::get_instance();
-}
