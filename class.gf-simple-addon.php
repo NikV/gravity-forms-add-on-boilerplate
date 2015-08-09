@@ -65,71 +65,6 @@ if (class_exists("GFForms")) {
 			<?php
 		}
 
-		/**
-		 * All fields registerd here go into the Form Settings tab when creating a new form
-		 *
-		 * @param $form The current form
-		 *
-		 * @return array Array for settings fields for the form
-		 */
-		public function form_settings_fields( $form ) {
-			return array(
-				array(
-					"title"  => "Simple Add-On Settings",
-					'description' => 'This is a description of the purpose of Section 1',
-					"fields" => array(
-						array(
-							"name"    => "textbox",
-							"tooltip" => "This is the tooltip",
-							"label"   => "This is the label",
-							"type"    => "text",
-							"class"   => "small",
-							"required" => true,
-
-						),
-						array(
-							"name"    => "textbox",
-							"tooltip" => "This is the tooltip",
-							"label"   => "This is the label",
-							"type"    => "radio",
-							"class"   => "small",
-							'choices'       => array(
-								array(
-									'name'   => 'choice1',
-									'label'  => 'this is the label for choice1',
-									'value'  => 'this is the value for choice1'
-								),
-								array(
-									'name'    => 'choice2',
-									'label'   => 'this is the label for choice2',
-								),
-							),
-						),
-						array(
-							"name"    => "samplecheckbox",
-							"tooltip" => "This is the tooltip",
-							"label"   => "This is the label",
-							"type"    => "checkbox",
-							"class"   => "small",
-							'onclick' => 'alert("Right you are! Good Choice")',
-							'choices'       => array(
-								array(
-									'name'   => 'choice1',
-									'tooltip'=> 'this is the tooltip for choice1',
-									'label'  => 'this is the label for choice1',
-									'value'  => 'this is the value for choice1'
-								),
-								array(
-									'name'    => 'choice2',
-									'tooltip' => 'this is the tooltip for choice2',
-									'label'   => 'this is the label for choice2',
-								),
-							),
-						),
-					)
-				)
-			);
-		}
 
 		/**
 		 * Columns for the Feed
@@ -153,6 +88,68 @@ if (class_exists("GFForms")) {
 		}
 
 		/**
+		 * All fields registerd here go into the Form Settings tab when creating a new form
+		 *
+		 * @param $form The current form
+		 *
+		 * @return array Array for settings fields for the form
+		 */
+		public function form_settings_fields( $form ) {
+			return array(
+				array(
+					"title"  => "Form Add-On Settings",
+					'description' => 'Methods of Contact',
+					"fields" => array(
+						array(
+							"name"     => "gf_sample_phone",
+							"tooltip"  => "This is the tooltip",
+							"label"    => "Email Address",
+							"type"     => "text",
+							"class"    => "small",
+							"required" => true,
+
+						),
+						array(
+							"name"     => "gf_sample_phone",
+							"tooltip"  => "This is the tooltip",
+							"label"    => "Phone Number",
+							"type"     => "text",
+							"class"    => "small",
+							"required" => true,
+
+						),
+					)
+				),
+				array(
+					"title"  => "Preferred method of contact",
+					"fields" => array(
+						array(
+							"name"    => "gf_sample_contact-method",
+							"tooltip" => "Preferred Method",
+							"label"   => "Preferred Method",
+							"type"    => "radio",
+							"class"   => "small",
+							"choices" => array(
+								array(
+									'name'   => 'choice1',
+									'tooltip'=> 'this is the tooltip for choice1',
+									'label'  => 'Phone Number',
+									'value'  => 'this is the value for choice1'
+								),
+								array(
+									'name'    => 'choice2',
+									'tooltip' => 'this is the tooltip for choice2',
+									'label'   => 'Email Address',
+								),
+							),
+						)
+					),
+				),
+
+			);
+		}
+
+		/**
 		 * All fields here go into the Gravity Form Plugin Settings Page
 		 *
 		 * @return array Settings fields for the plugin settings
@@ -161,14 +158,14 @@ if (class_exists("GFForms")) {
 			return array(
 				array(
 					"title"  => "Simple Add-On Settings",
-					'description' => 'This is a description of the purpose of Section 1',
+					'description' => 'This is a description of the purpose of Section 2',
 					"fields" => array(
 						array(
-							"name"    => "textbox",
-							"tooltip" => "This is the tooltip",
-							"label"   => "This is the label",
-							"type"    => "text",
-							"class"   => "small",
+							"name"     => "textbox",
+							"tooltip"  => "This is the tooltip",
+							"label"    => "This is the label",
+							"type"     => "text",
+							"class"    => "small",
 							"required" => true,
 
 						),
