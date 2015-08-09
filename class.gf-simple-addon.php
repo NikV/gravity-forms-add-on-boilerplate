@@ -97,7 +97,7 @@ if (class_exists("GFForms")) {
 		public function form_settings_fields( $form ) {
 			return array(
 				array(
-					"title"  => "Form Add-On Settings",
+					"title"  => "Form Specific Add-On Settings",
 					'description' => 'Methods of Contact',
 					"fields" => array(
 						array(
